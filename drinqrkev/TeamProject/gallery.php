@@ -1,4 +1,3 @@
-
 <?php
 	$_SESSION['username'] = "Admin";
 ?>
@@ -8,32 +7,48 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset = "UTF-8">
-		<title>Drinqr</title>
-		<meta name - "viewport" content="width=device-width, initial-scale=1.0">
-		<link rel = "stylesheet" href = "includes/style.css">
-	</head>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Drinqr</title>
+	<meta name - "viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="includes/style.css">
+</head>
 
 <body>
 
 	<header>
-		<a href="index.php" class = "header-brand">Drinqr</a>
-		
-		<nav>
-			<ul>
-				<li><a href="gallery.php">Gallery</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="contact.php">Contact</a></li>
-			</ul>
+		<a href="index.php" class="header-brand">Drinqr</a>
+
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-logo" href="#"><img src="#"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
 	</header>
 	<main>
-		<section class ="gallery-links">
+		<section class="gallery-links">
 			<div class="wrapper">
 				<h2>Drinq!</h2>
-				
-				<div class ="gallery-container">
+
+				<div class="gallery-container">
 					<?php
 					
 					include_once 'includes/dbh.inc.php';
@@ -61,7 +76,7 @@
 
 					?>
 				</div>
-				
+
 				<?php
 				
 				if (isset($_SESSION['username'])){ //verifies user logged in before displaying upload frame
@@ -80,18 +95,29 @@
 				}
 
 				?>
-				
+
 			</div>
 		</section>
-	
+		<div class="wrapper">
+			<footer class="container-fluid test-center">
+				<div class="row">
+					<div class="col-sm-4">
+						<h3>Contact Us</h3>
+						<br>
+						<h4>Contact info</h4>
+					</div>
+					<div class="col-sm-4">
+						<img src="#" class="icon">
+					</div>
+					<div class="col-sm-4">
+						<h3>Connect</h3>
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-google"></a>
+					</div>
+			</footer>
+
 </body>
-	</main>
-	<div class="wrapper">
-		<footer>
-			<ul class="footer-links-main">
-				<li><a href = "#"> Home</a></li>
-				<li><a href = "#"> Gallery</a></li>
-				<li><a href = "#"> About</a></li>
-				<li><a href = "#"> Contact</a></li>
-	</div>
+</main>
+
 </html>

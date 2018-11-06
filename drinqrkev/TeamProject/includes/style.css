@@ -101,7 +101,7 @@ input, select {
 }
 /*end of reset stylesheet*/
 
-*{
+/* *{
 	text-decoration:none;
 }
 main{
@@ -218,7 +218,48 @@ header nav ul li{
 
 	color: #111;
 
-}	
+}	 */
 	
 	
 	
+/* Navbar styling */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background: #5E4485;
+    color: #FFF;
+    padding: 1% 0;
+    font-size: 1.2em;
+    border: 0;
+ }
+
+ .navbar-logo {
+     float: left;
+     min-height: 55px;
+     padding: 0 15px 5px;
+ }
+
+.navbar-inverse .navbar-nav .active a,
+.navbar-inverse .navbar-nav .active a:focus, 
+.navbar-inverse .navbar-nav .active a:hover{
+    color: #FFF;
+    background-color: #5E4485;
+}
+.navbar-inverse .navbar-nav li a{
+    color: #D5D5D5;
+}
+
+footer {
+	width: 100%;
+	background-color: #5E4485;
+	padding: 3%;
+	color: white;
+	position: absolute;
+	bottom: 0px;
+}
+
+.fa {
+	padding: 20ox;
+	font-size: 30px;
+	color: white;
+}
