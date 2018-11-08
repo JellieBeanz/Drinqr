@@ -263,3 +263,44 @@ footer {
 	font-size: 30px;
 	color: white;
 }
+body{margin:40px;}
+
+
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+.slide1{
+	background-image: url('img\gallery\guinness.5bdef53abc0b15.73629446.jpg');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  }
+  .slide2{
+	background-image: url('bkgrnd2.png');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  }
+  .slide3{
+	background-image: url('bkgrnd3.png');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  }
+  .carousel-caption h1{
+	font-size: 5.4em;
+	font-family: 'Pacifico', cursive;
+	padding-bottom: .4em;
+  }
+  .carousel-caption p{
+	font-size: 2em;
+  }
