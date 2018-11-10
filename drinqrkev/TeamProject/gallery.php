@@ -11,14 +11,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Drinqr</title>
-	<meta name - "viewport" content="width=device-width, initial-scale=1.0">
+	<meta name= "viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="includes/style.css">
 </head>
 
 <body>
 
 	<header>
-		<a href="index.php" class="header-brand">Drinqr</a>
+		<a href="index.html" class="header-brand">Drinqr</a>
 
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -50,74 +50,77 @@
 
 				<div class="gallery-container">
 					<?php
-					
-					include_once 'includes/dbh.inc.php';
-					
-					$sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";	//set sql statement to variable
-					$stmt = mysqli_stmt_init($conn);							//initialise prepared statement with database conenction found in dbh.inc.php
-					if(!mysqli_stmt_prepare($stmt, $sql)){						//checks for error preparing statement
-						echo "SQL statement failed";
-					}else {
-						mysqli_stmt_execute($stmt);
-						$result = mysqli_stmt_get_result($stmt);
 						
-						while ($row = mysqli_fetch_assoc($result)){
-							echo '<a href="#">
-							<div style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
-							<h3>'.$row["barTitleGallery"].'</h3>
-							<h3>'.$row["titleGallery"].'</h3>
-							<p>'.$row["drinkCost"].'</p>
-							</a>';
+						include_once 'includes/dbh.inc.php';
+						
+						$sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";	//set sql statement to variable
+						$stmt = mysqli_stmt_init($conn);							//initialise prepared statement with database conenction found in dbh.inc.php
+						if(!mysqli_stmt_prepare($stmt, $sql)){						//checks for error preparing statement
+							echo "SQL statement failed";
+						}else {
+							mysqli_stmt_execute($stmt);
+							$result = mysqli_stmt_get_result($stmt);
+							
+							while ($row = mysqli_fetch_assoc($result)){
+								echo '<a href="#">
+								<div style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
+								<h3>'.$row["barTitleGallery"].'</h3>
+								<h3>'.$row["titleGallery"].'</h3>
+								<p>'.$row["drinkCost"].'</p>
+								</a>';
+							}
 						}
-					}
-					
-					
-					
+						
+						
+						
 
 					?>
 				</div>
 
-				<?php
-				
-				if (isset($_SESSION['username'])){ //verifies user logged in before displaying upload frame
-					echo '<div class ="gallery-upload">
-					<h2>UPLOAD</h2>
-					<form action ="includes/gallery-uploads.php" method ="post" enctype="multipart/form-data">
-						<input type ="text" name="filename" placeholder="File name...">
-						<input type ="text" name="filetitle" placeholder="Image title...">
-						<input type ="text" name="bartitle" placeholder="Bar name...">
-						<input type ="text" name="cost" placeholder="Drink price...">
-						<input type ="file" name="file">
-						<button type="submit" name="submit">Upload</button>
-					</form>
+					<?php
 					
-				</div>';	
-				}
+					if (isset($_SESSION['username'])){ //verifies user logged in before displaying upload frame
+							echo '<div class ="gallery-upload">
+									<h2>UPLOAD</h2>
+										<form action ="includes/gallery-uploads.php" method ="post" enctype="multipart/form-data">
+											<input type ="text" name="filename" placeholder="File name...">
+											<input type ="text" name="filetitle" placeholder="Image title...">
+											<input type ="text" name="bartitle" placeholder="Bar name...">
+											<input type ="text" name="cost" placeholder="Drink price...">
+											<input type ="file" name="file">
+											<button type="submit" name="submit">Upload</button>
+										</form>
+									</div>';	
+					}
 
-				?>
+					?>
 
+				</div>
 			</div>
 		</section>
-		<div class="wrapper">
-			<footer class="container-fluid test-center">
+	</main>	
+	<footer>
+		<div class="container-fluid text-center">
 				<div class="row">
 					<div class="col-sm-4">
-						<h3>Contact Us</h3>
-						<br>
-						<h4>Contact info</h4>
+							<h3>Contact Us</h3>
+							<br>
+							<h4>Contact info</h4>
 					</div>
 					<div class="col-sm-4">
-						<img src="#" class="icon">
+							<img src="#" class="icon">
 					</div>
 					<div class="col-sm-4">
-						<h3>Connect</h3>
-						<a href="#" class="fa fa-facebook"></a>
-						<a href="#" class="fa fa-twitter"></a>
-						<a href="#" class="fa fa-google"></a>
+							<h3>Connect</h3>
+							<a href="#" class="fa fa-facebook"></a>
+							<a href="#" class="fa fa-twitter"></a>
+							<a href="#" class="fa fa-google"></a>
 					</div>
-			</footer>
+				</div>
+			</div>
+	
+	</footer>
 
 </body>
-</main>
 
 </html>
