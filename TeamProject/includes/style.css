@@ -272,24 +272,13 @@ body{margin:40px;}
   line-height: 1.33;
   border-radius: 35px;
 }
-.slide1{
+.slide{
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
   }
-.slide2{
-	height: 500px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-  }
-.slide3{
-	height: 500px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-  }
+
 .carousel-caption h1{
 	font-size: 5.4em;
 	font-family: 'Pacifico', cursive;
