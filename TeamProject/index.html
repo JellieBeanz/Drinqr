@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="release/featherlight.min.css" />
 </head>
 
 <body>
@@ -29,10 +30,9 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Home</a></li>
+						<li class="active"><a href="\index.html">Home</a></li>
 						<li><a href="gallery.php">Gallery</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="gallery.html">Test Gallery</a></li>
 						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
@@ -44,45 +44,58 @@
 	<main>
 		<div class="container">
 			<div id="theCarousel" class="carousel slide" data-ride="carousel">
+			
+					<!-- Define how many slides to put in the carousel -->
+					<ol class="carousel-indicators">
+					<li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
+					<li data-target="#theCarousel" data-slide-to="1"> </li>
+					<li data-target ="#theCarousel" data-slide-to="2"> </li>
+					</ol >
+				
+					<!-- Define the text to place over the image -->
+					<div class="carousel-inner">
+							<div class="item active" >
+								<div class ="slide1"><img src="img/gallery/guinness.5bdef53abc0b15.73629446.jpg"></div>
+									<div class="carousel-caption">
+										<h1>Amazing Backgrounds</h1>
+										<p>Thousands of Backgrounds for Free</p>
+									
+									</div>
+							</div>
+							<div class="item">
+								<img class="slide2" src="img/gallery/pint.5be70b2d4d0c60.55664132.jpg">
+								<div class="carousel-caption">
+									<h1>Thousands of Colors</h1>
+									<p>Every Color you can Imagine</p>
+								</div>
+							</div>
+							<div class="item">
+								<img class="slide3" src="img/gallery/pint1.5beb279f91a130.68737511.jpg">
+								<div class="carousel-caption">
+										<h1>Amazing Illustrations</h1>
+										<p>And they are All Free</p>
+								</div>
+							</div>
+					</div>
+								<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"> </span>
+								</a>
+								<a class="right carousel-control" href="#theCarousel" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+								</a>
+					
+			</div>
+			<div class="container text-center">
+								<a href="#theCarousel" data-slide="prev">
+									<button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></a>
+								<a href="#theCarousel" data-slide="next">
+									<button tyep="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button>
+			</div>
+				
+			
+				
+		</div>
 		
-				<!-- Define how many slides to put in the carousel -->
-				<ol class="carousel-indicators">
-				<li data-target="#theCarousel" data-slide-to="0" class="active"> </li >
-				<li data-target="#theCarousel" data-slide-to="1"> </li>
-				<li data-target ="#theCarousel" data-slide-to="2"> </li>
-				</ol >
-			
-				<!-- Define the text to place over the image -->
-				<div class="carousel-inner">
-				<div class="item active" >
-				<div class ="slide1"></div>
-				<div class="carousel-caption">
-					<h1>Amazing Backgrounds</h1>
-					<p>Thousands of Backgrounds for Free</p>
-					<p><a href="#" class="btn btn-primary btn-sm">Get them Now</a></p>
-				</div>
-				</div>
-				<div class="item">
-				<div class="slide2"></div>
-				<div class="carousel-caption">
-				<h1>Thousands of Colors</h1>
-				<p>Every Color you can Imagine</p>
-				</div>
-				</div>
-				<div class="item">
-				<div class="slide3"></div>
-				<div class="carousel-caption">
-				<h1>Amazing Illustrations</h1>
-				<p>And they are All Free</p>
-				</div>
-				</div>
-				</div>
-			</div>
-			<div class="container">
-				<button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button>
-			
-				<button tyep="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button>
-			</div>
 	</main>
 	<footer>
 			<div class="container-fluid text-center">
