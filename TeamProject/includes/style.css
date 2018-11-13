@@ -23,7 +23,7 @@ time, mark, audio, video {
     outline:0;
     font-size:100%;
     vertical-align:baseline;
-    background:transparent;
+    
 }
 
 body {
@@ -123,7 +123,7 @@ header .header-brand{
 	font-size: 24px;
 	font-weight: 900;
 	color: #111;
-	text-transformL: uppercase;
+	text-transform: uppercase;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
@@ -138,7 +138,6 @@ header nav ul{
 
 header nav ul li{
 	display: inline-block;
-	float: left;
 	list-style:none;
 	padding: 0 16px;
 }
@@ -192,7 +191,7 @@ header nav ul li{
 
 }	
 
-.gallery-container a: hover {
+.gallery-container a:hover {
 	opacity: 0.8;
 }	
 
@@ -274,31 +273,31 @@ body{margin:40px;}
   border-radius: 35px;
 }
 .slide1{
-	background-image: url('img\gallery\guinness.5bdef53abc0b15.73629446.jpg');
+	background-image: url("img\gallery\pint.5be70b2d4d0c60.55664132.jpg");
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
   }
-  .slide2{
-	background-image: url('bkgrnd2.png');
+.slide2{
+	background-image: url('img\gallery\pint.5be70b2d4d0c60.55664132.jpg');
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
   }
-  .slide3{
+.slide3{
 	background-image: url('bkgrnd3.png');
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
   }
-  .carousel-caption h1{
+.carousel-caption h1{
 	font-size: 5.4em;
 	font-family: 'Pacifico', cursive;
 	padding-bottom: .4em;
   }
-  .carousel-caption p{
+.carousel-caption p{
 	font-size: 2em;
   }
