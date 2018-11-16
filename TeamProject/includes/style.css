@@ -272,6 +272,7 @@ body{margin:40px;}
   line-height: 1.33;
   border-radius: 35px;
 }
+<<<<<<< HEAD
 .slide1{
 	background-image: url("img\gallery\pint.5be70b2d4d0c60.55664132.jpg");
 	height: 500px;
@@ -288,11 +289,15 @@ body{margin:40px;}
   }
 .slide3{
 	background-image: url('bkgrnd3.png');
+=======
+.slide{
+>>>>>>> Shane
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
   }
+
 .carousel-caption h1{
 	font-size: 5.4em;
 	font-family: 'Pacifico', cursive;
@@ -300,4 +305,85 @@ body{margin:40px;}
   }
 .carousel-caption p{
 	font-size: 2em;
+  }
+
+  
+#container {
+	width: 500px;
+	margin: auto !important;
+	display: block;
+	height: 500px;
+	position: relative;
+	list-style-type: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  .buddy {
+	display: none;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	color: #fff;
+	padding: 20px;
+	width: 360px;
+	height: 360px;
+	top: 50px;
+	left: 50px;
+	position: absolute;
+	cursor: hand;
+  }
+  .rotate-left {
+	transform: rotate(30deg) scale(0.8);
+	transition: 1s;
+	margin-left: 400px;
+	cursor: e-resize;
+	opacity: 0;
+	z-index: 10;
+  }
+  .rotate-right {
+	transform: rotate(-30deg) scale(0.8);
+	transition: 1s;
+	opacity: 0;
+	margin-left: -400px;
+	cursor: w-resize;
+	z-index: 10;
+  }
+  .avatar {
+	background: #222;
+	width: 340px;
+	height: 340px;
+	display: block;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-size: auto 160% !important;
+	background-position: center;
+   background-repeat: no-repeat;
+  }
+  .like {
+	border-radius: 5px;
+	padding: 5px 10px;
+	border: 2px solid green;
+	color: green;
+	text-transform: uppercase;
+	font-size: 15px;
+	position: absolute;
+	top: 50px;
+	right: 40px;
+	text-shadow: none;
+  }
+  .dislike {
+	border-radius: 5px;
+	padding: 5px 10px;
+	border: 2px solid red;
+	color: red;
+	text-transform: uppercase;
+	font-size: 15px;
+	position: absolute;
+	top: 50px;
+	left: 40px;
+	text-shadow: none;
   }
