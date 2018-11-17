@@ -272,7 +272,6 @@ body{margin:40px;}
   line-height: 1.33;
   border-radius: 35px;
 }
-<<<<<<< HEAD
 .slide1{
 	background-image: url("img\gallery\pint.5be70b2d4d0c60.55664132.jpg");
 	height: 500px;
@@ -289,9 +288,6 @@ body{margin:40px;}
   }
 .slide3{
 	background-image: url('bkgrnd3.png');
-=======
-.slide{
->>>>>>> Shane
 	height: 500px;
 	background-repeat: no-repeat;
 	background-position: center;
