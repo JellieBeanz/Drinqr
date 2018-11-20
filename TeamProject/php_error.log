@@ -1,1 +1,0 @@
-[10-Nov-2018 17:11:04] PHP Fatal error:  Call to undefined function mysqli_stmt_get_result() in C:\xampp\htdocs\gallery.php on line 62

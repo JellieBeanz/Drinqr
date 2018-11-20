@@ -22,22 +22,24 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 					<a class="navbar-logo" href="#"><img src="#"></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="\index.html">Home</a></li>
-						<li><a href="gallery.php">Gallery</a></li>
-						<li><a href="gallery.html">Test Gallery</a></li>
-						<li><a href="swipe.html">Swipe</a></li>
-						<li><a href="oldswipe.html">old swipe</a></li>
+						<li><a href="\index.php">Home</a></li>
+						<li class="active"><a href="\Gallery.php">Gallery</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<!-- <a href="cases.php class ="header-cases">Cases</a>
-		-->
-	
+
 	</header>
 	<main>
 
@@ -47,7 +49,7 @@
 						
 						include_once 'includes/dbh.inc.php';
 						
-						$sql = "SELECT imgFullNameGallery FROM gallery";	//set sql statement to variable
+						$sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";	//set sql statement to variable
 						$stmt = mysqli_stmt_init($conn);							//initialise prepared statement with database conenction found in dbh.inc.php
 						if(!mysqli_stmt_prepare($stmt, $sql)){						//checks for error preparing statement
 							echo "SQL statement failed";
@@ -56,7 +58,13 @@
 							$result = mysqli_stmt_get_result($stmt);
 							
 							while ($row = mysqli_fetch_assoc($result)){
-								echo '<div class="avatar buddy"  style="display: block; background-image: url(img/gallery/'.$row["imgFullNameGallery"].')"></div>';
+								echo '
+
+								<div class="buddy" style="display: block;"><div class="avatar" style="display: block; background-image: url(img/gallery/'.$row["imgFullNameGallery"].')">
+								<h3>'.$row["barTitleGallery"].'</h3>
+								
+								<p>'.$row["drinkCost"].'</p></div></div>
+								';
 							}
 						}
 		?>
@@ -65,7 +73,7 @@
 									<a href="#theCarousel" data-slide="prev">
 										<button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></a>
 									<a href="#theCarousel" data-slide="next">
-										<button tyep="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button> </a>
+										<button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button> </a>
 			</div>
 		</div>
 	</main>

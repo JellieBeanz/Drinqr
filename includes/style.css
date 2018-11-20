@@ -49,6 +49,7 @@ q:before, q:after {
     content:none;
 }
 
+
 a {
     margin:0;
     padding:0;
@@ -174,7 +175,6 @@ header nav ul li{
 	color: #111;
 	text-transform:uppercase;
 }
-
 .gallery-container {
 
 	display: flex;
@@ -187,7 +187,7 @@ header nav ul li{
 	
 .gallery-container a{
 	width:230px;
-	margin: 20px 10 px 0;
+	margin: 20px 10px 0;
 
 }	
 
@@ -215,6 +215,7 @@ header nav ul li{
 
 	color: #111;
 
+}	
 }	
 	
 	
@@ -309,12 +310,13 @@ body{margin:40px;}
 	border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	color: #fff;
-	padding: 20px;
-	width: 360px;
-	height: 360px;
+	padding: 15px;
+	padding-top: 0px;
+	width: 370px;
+	height: 370px;
 	top: 50px;
 	left: 50px;
-	position: absolute;
+	position: Absolute;
 	cursor: hand;
   }
   .rotate-left {
@@ -336,14 +338,29 @@ body{margin:40px;}
   .avatar {
 	background: #222;
 	width: 340px;
+	border-radius: 5px;
 	height: 340px;
 	display: block;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: -5px;
+	margin-left: 0px;
 	background-size: auto 160% !important;
 	background-position: center;
-   background-repeat: no-repeat;
+	background-repeat: no-repeat;
   }
+ .avatar h3{
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+   .avatar p{
+	color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+  
+  
   .like {
 	border-radius: 5px;
 	padding: 5px 10px;
