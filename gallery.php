@@ -22,7 +22,7 @@
 <body>
 
 	<header>
-		<a href="index.html" class="header-brand">Drinqr</a>
+		<a href="index.php" class="header-brand">Drinqr</a>
 
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -36,10 +36,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="\index.html">Home</a></li>
-						<li class="active"><a href="\Gallery.php">Gallery</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li class="active"><a href="gallery.php">Gallery</a></li>
+			<!--		<li><a href="#">About</a></li>
 						<li><a href="#">Contact</a></li>
+			 -->
 					</ul>
 				</div>
 			</div>
