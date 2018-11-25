@@ -29,8 +29,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-logo" href="#"><img src="#"></a>
-				</div>
+					
+					<a href="index.php"><img class="navbar-logo" src="/img/logo.png"></a>
+				</div
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="index.php">Home</a></li>
