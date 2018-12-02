@@ -1,103 +1,163 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-		<meta charset="UTF-8">
-		<title>Drinqr</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="includes/style.css">
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
-		<script src="includes/drinqr.js"></script>
-	
-</head>
-
-<body>
-
-	<header>
-		<a href="index.html" class="header-brand">Drinqr</a>
-
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-logo" href="#"><img src="#"></a>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="\index.html">Home</a></li>
-						<li><a href="gallery.php">Gallery</a></li>
-						<li><a href="gallery.html">Test Gallery</a></li>
-						<li><a href="swipe.html">Swipe</a></li>
-						<li><a href="oldswipe.html">old swipe</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- <a href="cases.php class ="header-cases">Cases</a>
+<?php
+	require "header.php";
+?>
+      <a href="index.php" class="header-brand">DRINQR</a>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="gallery.php" class="header-cases">Drinq DB</a>
+      </nav>
+    </header>
+    <main>
+      <section class="index-banner">
+        <div class="vertical-center">
+          <h2>MATCH WITH THE DRINK </br> OF YOUR DREAMS</h2>
+          <h1>Because one is never enough</h1>
+        </div>
+      </section>
+    <div class="wrapper">
+  <!--  	<section class="index-links">
+          <a href="cases.html">
+            <div class="index-boxlink-square">
+              <h3>Cases</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="index-boxlink-rectangle">
+              <h3>Portfolio</h3>
+            </div>
+          </a>
+            <a href="#">
+            <div class="index-boxlink-square">
+              <h3>mmtuts</h3>
+            </div>
+          </a>
+            <a href="#">
+            <div class="index-boxlink-rectangle">
+              <h3>YouTube Channel</h3>
+            </div>
+          </a>
+            <a href="#">
+            <div class="index-boxlink-square">
+              <h3>About</h3>
+            </div>
+          </a>
+            <a href="#">
+            <div class="index-boxlink-square">
+              <h3>Contact</h3>
+            </div>
+          </a>
+        </section>
 		-->
-	
-	</header>
-	<main>
-
-	
-		<div id="container">
-		<?php
-						
-						include_once 'includes/dbh.inc.php';
-						
-						$sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";	//set sql statement to variable
-						$stmt = mysqli_stmt_init($conn);							//initialise prepared statement with database conenction found in dbh.inc.php
-						if(!mysqli_stmt_prepare($stmt, $sql)){						//checks for error preparing statement
-							echo "SQL statement failed";
-						}else {
-							mysqli_stmt_execute($stmt);
-							$result = mysqli_stmt_get_result($stmt);
-							
-							while ($row = mysqli_fetch_assoc($result)){
-								echo '
-
-								<div class="buddy" style="display: block;"><div class="avatar" style="display: block; background-image: url(img/gallery/'.$row["imgFullNameGallery"].')">
-								<h3>'.$row["barTitleGallery"].'</h3>
-								
-								<p>'.$row["drinkCost"].'</p></div></div>
-								';
-							}
-						}
-		?>
-		</div>
-			<div class="container text-center">
-									<a href="#theCarousel" data-slide="prev">
-										<button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></a>
-									<a href="#theCarousel" data-slide="next">
-										<button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button> </a>
-			</div>
-		</div>
-	</main>
-	
-		<footer>
-				<div class="container-fluid text-center">
-					<div class="row">
-						<div class="col-sm-4">
-								<h3>Contact Us</h3>
-								<br>
-								<h4>Contact info</h4>
-						</div>
-						<div class="col-sm-4">
-								<img src="#" class="icon">
-						</div>
-						<div class="col-sm-4">
-								<h3>Connect</h3>
-								<a href="#" class="fa fa-facebook"></a>
-								<a href="#" class="fa fa-twitter"></a>
-								<a href="#" class="fa fa-google"></a>
-						</div>
+			<div class="demo">
+			  <div class="demo__header"></div>
+			  <div class="demo__content">
+				<div class="demo__card-cont">
+				  <div class="demo__card">
+					<div class="demo__card__top brown">
+					  <div class="demo__card__img"></div>
+					  <p class="demo__card__name">Hungry cat 6</p>
 					</div>
+					<div class="demo__card__btm">
+					  <p class="demo__card__we">Whatever</p>
+					</div>
+					<div class="demo__card__choice m--reject"></div>
+					<div class="demo__card__choice m--like"></div>
+					<div class="demo__card__drag"></div>
+				  </div>
+				  <div class="demo__card">
+					<div class="demo__card__top lime">
+					  <div class="demo__card__img"></div>
+					  <p class="demo__card__name">Hungry cat 5</p>
+					</div>
+					<div class="demo__card__btm">
+					  <p class="demo__card__we">Whatever</p>
+					</div>
+					<div class="demo__card__choice m--reject"></div>
+					<div class="demo__card__choice m--like"></div>
+					<div class="demo__card__drag"></div>
+				  </div>
+				  <div class="demo__card">
+					<div class="demo__card__top cyan">
+					  <div class="demo__card__img"></div>
+					  <p class="demo__card__name">Hungry cat 4</p>
+					</div>
+					<div class="demo__card__btm">
+					  <p class="demo__card__we">Whatever</p>
+					</div>
+					<div class="demo__card__choice m--reject"></div>
+					<div class="demo__card__choice m--like"></div>
+					<div class="demo__card__drag"></div>
+				  </div>
+				  <div class="demo__card">
+					<div class="demo__card__top indigo">
+					  <div class="demo__card__img"></div>
+					  <p class="demo__card__name">Hungry cat 3</p>
+					</div>
+					<div class="demo__card__btm">
+					  <p class="demo__card__we">Whatever</p>
+					</div>
+					<div class="demo__card__choice m--reject"></div>
+					<div class="demo__card__choice m--like"></div>
+					<div class="demo__card__drag"></div>
+				  </div>
+				  <div class="demo__card">
+					<div class="demo__card__top blue">
+					  <div class="demo__card__img"></div>
+					  <p class="demo__card__name">Hungry cat 2</p>
+					</div>
+					<div class="demo__card__btm">
+					  <p class="demo__card__we">Whatever</p>
+					</div>
+					<div class="demo__card__choice m--reject"></div>
+					<div class="demo__card__choice m--like"></div>
+					<div class="demo__card__drag"></div>
+				  </div>
+				  <div class="demo__card">
+					<div class="demo__card__top purple">
+					  <div class="demo__card__img"></div>
+					  <p class="demo__card__name">Hungry cat</p>
+					</div>
+					<div class="demo__card__btm">
+					  <p class="demo__card__we">Whatever</p>
+					</div>
+					<div class="demo__card__choice m--reject"></div>
+					<div class="demo__card__choice m--like"></div>
+					<div class="demo__card__drag"></div>
+				  </div>
 				</div>
-		</footer>
+				<p class="demo__tip">Swipe left or right</p>
+			  </div>
+			</div>	
 		
-	</body>
+		
+		
+		</div>
 
-
+    </main>
+    <div class="wrapper">
+      <footer>
+        <ul class="footer-links-main">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="gallery.php">Drinq Database</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="footer-sm">
+          <a href="https://www.youtube.com/watch?v=hHW1oY26kxQ">
+            <img src="img/youtube-symbol.png" alt="youtube icon">
+          </a>
+          <a href="https://twitter.com/NCIRL">
+            <img src="img/twitter-logo-button.png" alt="twitter icon">
+          </a>
+          <a href="https://www.facebook.com/NCILIBRARY/">
+            <img src="img/facebook-logo-button.png" alt="facebook icon">
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
