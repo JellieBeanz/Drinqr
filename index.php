@@ -1,20 +1,15 @@
 <?php
 	require "header.php";
 ?>
-      <a href="index.php" class="header-brand">DRINQR</a>
-      <nav>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a href="gallery.php" class="header-cases">Drinq DB</a>
-      </nav>
+
     </header>
     <main>
       <section class="index-banner">
         <div class="vertical-center">
           <h2>MATCH WITH THE DRINK </br> OF YOUR DREAMS</h2>
           <h1>Because one is never enough</h1>
+		  <h1>You are logged in</h1>
+		  <h1>You are logged out</h1>
         </div>
       </section>
     <div class="wrapper">
@@ -51,86 +46,87 @@
           </a>
         </section>
 		-->
-			<div class="demo">
-			  <div class="demo__header"></div>
-			  <div class="demo__content">
-				<div class="demo__card-cont">
-				  <div class="demo__card">
-					<div class="demo__card__top brown">
-					  <div class="demo__card__img"></div>
-					  <p class="demo__card__name">Hungry cat 6</p>
-					</div>
-					<div class="demo__card__btm">
-					  <p class="demo__card__we">Whatever</p>
-					</div>
-					<div class="demo__card__choice m--reject"></div>
-					<div class="demo__card__choice m--like"></div>
-					<div class="demo__card__drag"></div>
-				  </div>
-				  <div class="demo__card">
-					<div class="demo__card__top lime">
-					  <div class="demo__card__img"></div>
-					  <p class="demo__card__name">Hungry cat 5</p>
-					</div>
-					<div class="demo__card__btm">
-					  <p class="demo__card__we">Whatever</p>
-					</div>
-					<div class="demo__card__choice m--reject"></div>
-					<div class="demo__card__choice m--like"></div>
-					<div class="demo__card__drag"></div>
-				  </div>
-				  <div class="demo__card">
-					<div class="demo__card__top cyan">
-					  <div class="demo__card__img"></div>
-					  <p class="demo__card__name">Hungry cat 4</p>
-					</div>
-					<div class="demo__card__btm">
-					  <p class="demo__card__we">Whatever</p>
-					</div>
-					<div class="demo__card__choice m--reject"></div>
-					<div class="demo__card__choice m--like"></div>
-					<div class="demo__card__drag"></div>
-				  </div>
-				  <div class="demo__card">
-					<div class="demo__card__top indigo">
-					  <div class="demo__card__img"></div>
-					  <p class="demo__card__name">Hungry cat 3</p>
-					</div>
-					<div class="demo__card__btm">
-					  <p class="demo__card__we">Whatever</p>
-					</div>
-					<div class="demo__card__choice m--reject"></div>
-					<div class="demo__card__choice m--like"></div>
-					<div class="demo__card__drag"></div>
-				  </div>
-				  <div class="demo__card">
-					<div class="demo__card__top blue">
-					  <div class="demo__card__img"></div>
-					  <p class="demo__card__name">Hungry cat 2</p>
-					</div>
-					<div class="demo__card__btm">
-					  <p class="demo__card__we">Whatever</p>
-					</div>
-					<div class="demo__card__choice m--reject"></div>
-					<div class="demo__card__choice m--like"></div>
-					<div class="demo__card__drag"></div>
-				  </div>
-				  <div class="demo__card">
-					<div class="demo__card__top purple">
-					  <div class="demo__card__img"></div>
-					  <p class="demo__card__name">Hungry cat</p>
-					</div>
-					<div class="demo__card__btm">
-					  <p class="demo__card__we">Whatever</p>
-					</div>
-					<div class="demo__card__choice m--reject"></div>
-					<div class="demo__card__choice m--like"></div>
-					<div class="demo__card__drag"></div>
-				  </div>
+
+		<div class="demo">
+		  <div class="demo__header"></div>
+		  <div class="demo__content">
+			<div class="demo__card-cont">
+			  <div class="demo__card">
+				<div class="demo__card__top brown">
+				  <div class="demo__card__img"></div>
+				  <p class="demo__card__name">Hungry cat 6</p>
 				</div>
-				<p class="demo__tip">Swipe left or right</p>
+				<div class="demo__card__btm">
+				  <p class="demo__card__we">Whatever</p>
+				</div>
+				<div class="demo__card__choice m--reject"></div>
+				<div class="demo__card__choice m--like"></div>
+				<div class="demo__card__drag"></div>
 			  </div>
-			</div>	
+			  <div class="demo__card">
+				<div class="demo__card__top lime">
+				  <div class="demo__card__img"></div>
+				  <p class="demo__card__name">Hungry cat 5</p>
+				</div>
+				<div class="demo__card__btm">
+				  <p class="demo__card__we">Whatever</p>
+				</div>
+				<div class="demo__card__choice m--reject"></div>
+				<div class="demo__card__choice m--like"></div>
+				<div class="demo__card__drag"></div>
+			  </div>
+			  <div class="demo__card">
+				<div class="demo__card__top cyan">
+				  <div class="demo__card__img"></div>
+				  <p class="demo__card__name">Hungry cat 4</p>
+				</div>
+				<div class="demo__card__btm">
+				  <p class="demo__card__we">Whatever</p>
+				</div>
+				<div class="demo__card__choice m--reject"></div>
+				<div class="demo__card__choice m--like"></div>
+				<div class="demo__card__drag"></div>
+			  </div>
+			  <div class="demo__card">
+				<div class="demo__card__top indigo">
+				  <div class="demo__card__img"></div>
+				  <p class="demo__card__name">Hungry cat 3</p>
+				</div>
+				<div class="demo__card__btm">
+				  <p class="demo__card__we">Whatever</p>
+				</div>
+				<div class="demo__card__choice m--reject"></div>
+				<div class="demo__card__choice m--like"></div>
+				<div class="demo__card__drag"></div>
+			  </div>
+			  <div class="demo__card">
+				<div class="demo__card__top blue">
+				  <div class="demo__card__img"></div>
+				  <p class="demo__card__name">Hungry cat 2</p>
+				</div>
+				<div class="demo__card__btm">
+				  <p class="demo__card__we">Whatever</p>
+				</div>
+				<div class="demo__card__choice m--reject"></div>
+				<div class="demo__card__choice m--like"></div>
+				<div class="demo__card__drag"></div>
+			  </div>
+			  <div class="demo__card">
+				<div class="demo__card__top purple">
+				  <div class="demo__card__img"></div>
+				  <p class="demo__card__name">Hungry cat</p>
+				</div>
+				<div class="demo__card__btm">
+				  <p class="demo__card__we">Whatever</p>
+				</div>
+				<div class="demo__card__choice m--reject"></div>
+				<div class="demo__card__choice m--like"></div>
+				<div class="demo__card__drag"></div>
+			  </div>
+			</div>
+			<p class="demo__tip">Swipe left or right</p>
+		  </div>
+		</div>	
 		
 		
 		

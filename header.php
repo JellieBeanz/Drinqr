@@ -12,6 +12,35 @@
 
 <body>
 
-	<header>
+	<header> 			<!-- Header which includes the login form -->
 		
+		<nav class ="nav-header-main">
+		<a href="index.php" class="header-brand">DRINQR</a>
+		
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			</nav>
+			
+			<a href="gallery.php" class="header-cases">Drinq DB</a>
+			
+			<div class="header-login">
+			<?php
+				if (!isset($_SESSION['id'])) {
+					echo '<form action ="includes/login.php" method ="post">
+						<input type = "text" name = "mailuid" placeholder ="Username">
+						<input type = "password" name = "pwd" placeholder ="Password">
+						<button type = "submit" name = "login-submit">Login</button>
+					</form>
+					<a href ="signup.php" class="header-signup">Sign up</a>';
+				}
+				else if (isset($_SESSION['id'])) {
+					echo '	<form action ="includes/logout.php" method ="post">
+							<button type = "submit" name = "logout-submit">Logout</button>
+							</form>';			
+				}
+			?>
+			</div>
+		</nav>
 
