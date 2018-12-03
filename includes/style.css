@@ -190,8 +190,8 @@ header .header-cases {
     line-height: 38px;
     border: 1px solid #111;
     float: right;
-    margin-right: 40px;
-
+    margin-right: 50px;
+	margin-left:500px;
     padding: 0 20px;
   }
 }
@@ -312,7 +312,7 @@ header {
 }
 
 main {
-  padding-top: 20px;
+  padding-top: 200px;
 }
 
 .section-default {
@@ -667,6 +667,7 @@ footer {
   width: calc(100% - 80px);
   padding: 40px 40px;
   margin-top: 20px;
+  margin-left: 40px;
   background-color: #111;
   overflow: hidden;
 }

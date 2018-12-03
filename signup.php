@@ -1,8 +1,8 @@
 <?php
   require "header.php";
 ?>
-
-    <main>
+    </header>
+	<main>
       <div class="wrapper-main">
         <section class="section-default">
           <h1>Signup</h1>
@@ -27,26 +27,24 @@
               echo '<p class="signuperror">Username is already taken!</p>';
             }
           }
-          // Here we create a success message if the new user was created.
           else if (isset($_GET["signup"])) {
             if ($_GET["signup"] == "success") {
               echo '<p class="signupsuccess">Signup successful!</p>';
             }
           }
           ?>
-          <form class="form-signup" action="includes/signup.inc.php" method="post">
-            <?php
-            // Here we check if the user already tried submitting data.
+		  
+          <form class="form-signup" action="includes/signup.inc.php" method="post"> <!-- signup form using post method -->
+          <?php
 
-            // We check username.
-            if (!empty($_GET["uid"])) {
-              echo '<input type="text" name="uid" placeholder="Username" value="'.$_GET["uid"].'">';
+            if (!empty($_GET["uid"])) {	//checks if 
+              echo '<input type="text" name="uid" placeholder="Username" value="'.$_GET["uid"].'">'; 
             }
             else {
               echo '<input type="text" name="uid" placeholder="Username">';
             }
 
-            // We check e-mail.
+     
             if (!empty($_GET["mail"])) {
               echo '<input type="text" name="mail" placeholder="E-mail" value="'.$_GET["mail"].'">';
             }
@@ -58,21 +56,11 @@
             <input type="password" name="pwd-repeat" placeholder="Repeat password">
             <button type="submit" name="signup-submit">Signup</button>
           </form>
-          <!--
-          NOTES FOR ME BEFORE DOING PHP!
-          <form class="form-signup" action="includes/signup.inc.php" method="post">
-            <input type="text" name="uid" placeholder="Username">
-            <input type="text" name="mail" placeholder="E-mail">
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="pwd-repeat" placeholder="Repeat password">
-            <button type="submit" name="signup-submit">Signup</button>
-          </form>
-          -->
+
         </section>
       </div>
     </main>
 
 <?php
-  // And just like we include the header from a separate file, we do the same with the footer.
   require "footer.php";
 ?>

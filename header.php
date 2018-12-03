@@ -23,7 +23,7 @@
 			</ul>
 			</nav>
 			
-			<a href="gallery.php" class="header-cases">Drinq DB</a>
+			<a href="gallery.php" class="header-cases">DrinqDB</a>
 			
 			<div class="header-login">
 			<?php
@@ -33,7 +33,7 @@
 						<input type = "password" name = "pwd" placeholder ="Password">
 						<button type = "submit" name = "login-submit">Login</button>
 					</form>
-					<a href ="signup.php" class="header-signup">Sign up</a>';
+					<a href ="signup.php" class="header-signup">Signup</a>';
 				}
 				else if (isset($_SESSION['id'])) {
 					echo '	<form action ="includes/logout.php" method ="post">
