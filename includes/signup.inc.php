@@ -66,10 +66,10 @@ else if ($password !== $passwordRepeat) {														// verifies if password a
       }
     }
   }
- mysqli_stmt_close($stmt);
-  mysqli_close($conn);
+ mysqli_stmt_close($stmt);																		//closes statement
+  mysqli_close($conn);																			// closes db connection
 }
 else {
-  header("Location: ../signup.php");
-  exit();	//exit method stops all code from running after this point
+  header("Location: ../signup.php");															//sends user to signup page if user attempts to access page without clicking "signup-submit" button					
+  exit();	
 }
