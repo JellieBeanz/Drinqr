@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +8,8 @@
     <title>Drinqr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900|Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="includes/style.css">
-	<script src="includes/drinqr.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 	
   </head>
 
@@ -27,7 +30,7 @@
 			
 			<div class="header-login">
 			<?php
-				if (!isset($_SESSION['id'])) {
+				if (!isset($_SESSION['userId'])) {
 					echo '<form action ="includes/login.php" method ="post">
 						<input type = "text" name = "mailuid" placeholder ="Username">
 						<input type = "password" name = "pwd" placeholder ="Password">
@@ -35,7 +38,7 @@
 					</form>
 					<a href ="signup.php" class="header-signup">Signup</a>';
 				}
-				else if (isset($_SESSION['id'])) {
+				else if (isset($_SESSION['userId'])) {
 					echo '	<form action ="includes/logout.php" method ="post">
 							<button type = "submit" name = "logout-submit">Logout</button>
 							</form>';			

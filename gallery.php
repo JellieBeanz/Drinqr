@@ -40,7 +40,7 @@
 
 					<?php
 					
-					//if (isset($_SESSION['username'])){ //verifies user logged in before displaying upload frame
+					if (isset($_SESSION['userId'])){ //verifies user logged in before displaying upload frame
 							echo '<div class ="gallery-upload">
 									<h2>UPLOAD</h2>
 										<form action ="includes/gallery-uploads.php" method ="post" enctype="multipart/form-data">
@@ -52,7 +52,7 @@
 											<button type="submit" name="submit">Upload</button>
 										</form>
 									</div>';	
-					//}
+					}
 
 					?>
 				

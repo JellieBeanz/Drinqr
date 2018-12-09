@@ -7,23 +7,23 @@
         <section class="section-default">
           <h1>Signup</h1>
           <?php
-          if (isset($_GET["error"])) {
-            if ($_GET["error"] == "emptyfields") {
+          if (isset($_GET["error"])) {							//checks if error using get method
+            if ($_GET["error"] == "emptyfields") {				//checks if error using get method = emptyfields
               echo '<p class="signuperror">Fill in all fields!</p>';
             }
-            else if ($_GET["error"] == "invaliduidmail") {
+            else if ($_GET["error"] == "invaliduidmail") {		//checks if error using get method = invaliduidmail
               echo '<p class="signuperror">Invalid username and e-mail!</p>';
             }
-            else if ($_GET["error"] == "invaliduid") {
+            else if ($_GET["error"] == "invaliduid") {			//checks if error using get method = invaliduid
               echo '<p class="signuperror">Invalid username!</p>';
             }
-            else if ($_GET["error"] == "invalidmail") {
+            else if ($_GET["error"] == "invalidmail") {			//checks if error using get method = invalidmail
               echo '<p class="signuperror">Invalid e-mail!</p>';
             }
-            else if ($_GET["error"] == "passwordcheck") {
+            else if ($_GET["error"] == "passwordcheck") {		//checks if error using get method = passwordcheck
               echo '<p class="signuperror">Your passwords do not match!</p>';
             }
-            else if ($_GET["error"] == "usertaken") {
+            else if ($_GET["error"] == "usertaken") {			//checks if error using get method = usertaken
               echo '<p class="signuperror">Username is already taken!</p>';
             }
           }

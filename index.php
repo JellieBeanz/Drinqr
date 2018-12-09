@@ -2,138 +2,69 @@
 	require "header.php";
 ?>
 
-    </header>
-    <main>
-      <section class="index-banner">
-        <div class="vertical-center">
-          <h2>MATCH WITH THE DRINK </br> OF YOUR DREAMS</h2>
-          <h1>Because one is never enough</h1>
-		  <h1>You are logged in</h1>
-		  <h1>You are logged out</h1>
-        </div>
-      </section>
-    <div class="wrapper">
-  <!--  	<section class="index-links">
-          <a href="cases.html">
-            <div class="index-boxlink-square">
-              <h3>Cases</h3>
-            </div>
-          </a>
-          <a href="#">
-            <div class="index-boxlink-rectangle">
-              <h3>Portfolio</h3>
-            </div>
-          </a>
-            <a href="#">
-            <div class="index-boxlink-square">
-              <h3>mmtuts</h3>
-            </div>
-          </a>
-            <a href="#">
-            <div class="index-boxlink-rectangle">
-              <h3>YouTube Channel</h3>
-            </div>
-          </a>
-            <a href="#">
-            <div class="index-boxlink-square">
-              <h3>About</h3>
-            </div>
-          </a>
-            <a href="#">
-            <div class="index-boxlink-square">
-              <h3>Contact</h3>
-            </div>
-          </a>
-        </section>
-		-->
+    <div class="wrap">
 
-		<div class="demo">
-		  <div class="demo__header"></div>
-		  <div class="demo__content">
-			<div class="demo__card-cont">
-			  <div class="demo__card">
-				<div class="demo__card__top brown">
-				  <div class="demo__card__img"></div>
-				  <p class="demo__card__name">Hungry cat 6</p>
-				</div>
-				<div class="demo__card__btm">
-				  <p class="demo__card__we">Whatever</p>
-				</div>
-				<div class="demo__card__choice m--reject"></div>
-				<div class="demo__card__choice m--like"></div>
-				<div class="demo__card__drag"></div>
-			  </div>
-			  <div class="demo__card">
-				<div class="demo__card__top lime">
-				  <div class="demo__card__img"></div>
-				  <p class="demo__card__name">Hungry cat 5</p>
-				</div>
-				<div class="demo__card__btm">
-				  <p class="demo__card__we">Whatever</p>
-				</div>
-				<div class="demo__card__choice m--reject"></div>
-				<div class="demo__card__choice m--like"></div>
-				<div class="demo__card__drag"></div>
-			  </div>
-			  <div class="demo__card">
-				<div class="demo__card__top cyan">
-				  <div class="demo__card__img"></div>
-				  <p class="demo__card__name">Hungry cat 4</p>
-				</div>
-				<div class="demo__card__btm">
-				  <p class="demo__card__we">Whatever</p>
-				</div>
-				<div class="demo__card__choice m--reject"></div>
-				<div class="demo__card__choice m--like"></div>
-				<div class="demo__card__drag"></div>
-			  </div>
-			  <div class="demo__card">
-				<div class="demo__card__top indigo">
-				  <div class="demo__card__img"></div>
-				  <p class="demo__card__name">Hungry cat 3</p>
-				</div>
-				<div class="demo__card__btm">
-				  <p class="demo__card__we">Whatever</p>
-				</div>
-				<div class="demo__card__choice m--reject"></div>
-				<div class="demo__card__choice m--like"></div>
-				<div class="demo__card__drag"></div>
-			  </div>
-			  <div class="demo__card">
-				<div class="demo__card__top blue">
-				  <div class="demo__card__img"></div>
-				  <p class="demo__card__name">Hungry cat 2</p>
-				</div>
-				<div class="demo__card__btm">
-				  <p class="demo__card__we">Whatever</p>
-				</div>
-				<div class="demo__card__choice m--reject"></div>
-				<div class="demo__card__choice m--like"></div>
-				<div class="demo__card__drag"></div>
-			  </div>
-			  <div class="demo__card">
-				<div class="demo__card__top purple">
-				  <div class="demo__card__img"></div>
-				  <p class="demo__card__name">Hungry cat</p>
-				</div>
-				<div class="demo__card__btm">
-				  <p class="demo__card__we">Whatever</p>
-				</div>
-				<div class="demo__card__choice m--reject"></div>
-				<div class="demo__card__choice m--like"></div>
-				<div class="demo__card__drag"></div>
-			  </div>
-			</div>
-			<p class="demo__tip">Swipe left or right</p>
-		  </div>
-		</div>	
-		
-		
-		
-		</div>
 
-    </main>
+
+    <!-- start padding container -->
+
+    <div id="tinderslide">
+    <ul>
+    <?php
+						
+                        include_once 'includes/dbh.inc.php';
+                        
+                $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";	//set sql statement to variable
+                $stmt = mysqli_stmt_init($conn);							//initialise prepared statement with database conenction found in dbh.inc.php
+                if(!mysqli_stmt_prepare($stmt, $sql)){						//checks for error preparing statement
+                echo "SQL statement failed";
+                    }else {
+                                        mysqli_stmt_execute($stmt);
+                                        $result = mysqli_stmt_get_result($stmt);
+                                        
+                                        while ($row = mysqli_fetch_assoc($result)){
+                                            echo '
+            
+                                            
+                    <!-- start slide from Db container -->
+                    
+                        
+                            <li class="pane1">
+                                <div class="img" style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].')"></div>
+                                <div>'.$row["barTitleGallery"].'</div>
+                                <div>'.$row["drinkCost"].'</div>
+                                <div class="like"></div>
+                                <div class="dislike"></div>
+                            </li>
+                          
+                    
+                    <!-- end jtinder container -->
+                
+                                            ';
+                    }
+                    }
+                ?>
+                
+                </ul>
+    </div>
+   </div>
+
+    <!-- jTinder trigger by buttons  -->
+    <div class="actions">
+        <a href="#" class="dislike"><i></i></a>
+        <a href="#" class="like"><i></i></a>
+    </div>
+   
+ <!-- jQuery lib -->
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- transform2d lib -->
+    <script type="text/javascript" src="js/jquery.transform2d.js"></script>
+    <!-- jTinder lib -->
+    <script type="text/javascript" src="js/jquery.jTinder.js"></script>
+    <!-- jTinder initialization script -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
 <?php
   require "footer.php";
 ?>
-
+</html>

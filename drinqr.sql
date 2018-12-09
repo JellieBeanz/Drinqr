@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2018 at 07:38 PM
+-- Generation Time: Dec 09, 2018 at 11:38 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -42,32 +42,10 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`idGallery`, `titleGallery`, `barTitleGallery`, `drinkCost`, `imgFullNameGallery`, `orderGallery`) VALUES
-(20, 'Best Guinness in Town', 'Hogans', '$5.00', 'guinness.5bdef53abc0b15.73629446.jpg', '1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pubs`
---
-
-CREATE TABLE `pubs` (
-  `PubID` int(11) NOT NULL,
-  `Name` varchar(200) NOT NULL,
-  `Address` varchar(500) NOT NULL,
-  `Lat` float(10,6) NOT NULL,
-  `Lng` float(10,6) NOT NULL,
-  `PictureID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pubs`
---
-
-INSERT INTO `pubs` (`PubID`, `Name`, `Address`, `Lat`, `Lng`, `PictureID`) VALUES
-(1, 'O\'Connell\'s', '30 Bachelor\'s Walk, North City, Dublin', 53.347454, -6.260195, 1),
-(2, 'WileyFox', '28 Eden Quay, North City, Dublin, D01 V9Y4', 53.348587, -6.255888, 2),
-(3, 'Mulligans', '8 Poolbeg St, Dublin 2', 53.346916, -6.255455, 3),
-(4, 'Lanigan\'s Pub', '10 Eden Quay, North City, Dublin', 53.348007, -6.257842, 4);
+(23, 'Tasty Guinness', 'Johns Bar', 'â‚¬4.50', 'nicewan.5bf0381b902b52.08288535.jpg', '1'),
+(24, 'gewwaan', 'Murphy\'s', 'â‚¬5.20', 'blackstuff.5bf0384ac4bc47.74865615.jpg', '2'),
+(25, 'Pint O\' Plain', 'Madigan\'s', 'â‚¬5.90', 'guinnesss.5bf038bd4cf699.85031539.jpg', '3'),
+(26, 'test3', 'asd', '$600', 'asd.5c03f949b6d8d5.75391444.jpg', '4');
 
 -- --------------------------------------------------------
 
@@ -76,20 +54,23 @@ INSERT INTO `pubs` (`PubID`, `Name`, `Address`, `Lat`, `Lng`, `PictureID`) VALUE
 --
 
 CREATE TABLE `users` (
-  `UserID` int(11) NOT NULL,
-  `Username` varchar(50) NOT NULL,
-  `pwd` varchar(25) NOT NULL
+  `idUsers` int(11) NOT NULL,
+  `uidUsers` tinytext NOT NULL,
+  `emailUsers` tinytext NOT NULL,
+  `pwdUsers` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UserID`, `Username`, `pwd`) VALUES
-(1, 'JellieBeanz', 'test'),
-(2, 'Kehv', 'test'),
-(3, 'Bozappa', 'test'),
-(4, 'Simone', 'test');
+INSERT INTO `users` (`idUsers`, `uidUsers`, `emailUsers`, `pwdUsers`) VALUES
+(1, 'Testuser1', 'Testemail@test.ie', '$2y$10$b/UwpuEy7IhJo9BCsYQpPugSrTiMzuborD6lSPytIxEDmtmVnX8em'),
+(2, 'testuser2', 'test@hotmail.com', '$2y$10$1S4FSdylQ.XhXxiSOYW.g.BrbPMLHH.RT4v4bNOjbvTygLg8XSHnC'),
+(3, 'KevUser', 'kevintest@gmail.com', '$2y$10$P5.Z/g7ntWeufuEF7gJONuNk2NhEe6Zoiu15L/ju14f9Nc4SspBoO'),
+(4, 'testDrinqr', 'testdrinqr@gmail.com', '$2y$10$6RcT/dny6apfafT90e23KeeZmTeQGA8J03FlU9UkN31B4YOjsg/Ba'),
+(5, 'testDrinqr2', 'testdrinqr@gmail.com', '$2y$10$L1ZGOnXHGXRzOgpCkoDii.wrsv2t8IKRjpie0DmRo6UIEj3k6P.8u'),
+(6, 'testertest', 'testetest@gmail.com', '$2y$10$au4YSlw2FHo.pNq6Mp7SwOeB33X4yvoBfu7JShGzcq5.7Nkz21wO2');
 
 --
 -- Indexes for dumped tables
@@ -102,16 +83,10 @@ ALTER TABLE `gallery`
   ADD PRIMARY KEY (`idGallery`);
 
 --
--- Indexes for table `pubs`
---
-ALTER TABLE `pubs`
-  ADD PRIMARY KEY (`PubID`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`UserID`);
+  ADD PRIMARY KEY (`idUsers`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -127,7 +102,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
