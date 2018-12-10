@@ -2,10 +2,11 @@
 /************************* JTINDER (SWIPE) *************************/
 /* Wrapper with padding */
 .wrap  {
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 400px;
     padding: 2%;
     padding-left: 37%;
+    background: black;
 }
 
 #tinderslide {
@@ -130,6 +131,7 @@
     width: 304px;
     margin: 0 auto;
     overflow: hidden;
+    background: black;
 }
 
 .actions div {
@@ -234,7 +236,7 @@
     font-family: Catamaran;
     font-size: 20px;
     font-weight: 700;
-    color: #111;
+    color: rgb(255, 255, 255);
     padding-top: 16px;
     line-height: 26px;
   }
@@ -243,7 +245,7 @@
     font-family: Catamaran;
     font-size: 16px;
     font-weight: 400;
-    color: #111;
+    color: white;
     padding-top: 4px;
     line-height: 20px;
   }
@@ -352,6 +354,7 @@
   
   header .header-cases {
     display: none;
+    background: white;
   }
   
   @media only screen and (min-width: 1000px) {
@@ -379,12 +382,12 @@
       font-size: 16px;
       color: #111;
       text-transform: uppercase;
-      line-height: 38px;
+      line-height: 35px;
       border: 1px solid #111;
       float: right;
-      margin-right: 50px;
-      margin-left:500px;
+      margin-right: 0;
       padding: 0 20px;
+      background: white;
     }
   }
 /************************* HEADER *************************/
@@ -448,6 +451,7 @@ button {
   height: 60%;
   display: flex;
   flex-direction: row;
+  background: white;
 }
 
 .header-login form {
@@ -645,11 +649,15 @@ button {
 /************************* FOOTER *************************/
 footer {
     width: calc(100% - 80px);
+    height: 100px;
     padding: 40px 40px;
     margin-top: 20px;
     margin-left: 40px;
-    background-color: #111;
-    overflow: hidden;
+    background-color: black;
+    overflow: auto;
+    position: relative;
+    border-color: white;
+    border: 1px;
   }
   
   footer ul {
@@ -702,3 +710,7 @@ footer {
     }
   }
   
+  html{
+    overflow-y: scroll;
+    background: black;
+  }
