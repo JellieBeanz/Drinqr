@@ -21,12 +21,12 @@
 		<a href="index.php" class="header-brand">DRINQR</a>
 		
 			<ul>
+				<li><a href="gallery.php">DRINQ</a></li>
 				<li><a href="about.html">About</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			</nav>
 			
-			<a href="gallery.php" class="header-cases">DrinqDB</a>
 			
 			<div class="header-login">
 			<?php
